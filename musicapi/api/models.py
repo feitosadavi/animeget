@@ -10,3 +10,9 @@ class Music(TimeStampedModel):
 
 	def __str__(self):
 		return self.title
+
+class Band(TimeStampedModel):
+	class Meta:
+		db_table = 'band'
+
+	name = models.CharField(max_length=200)
