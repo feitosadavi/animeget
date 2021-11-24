@@ -22,7 +22,7 @@ class Album(TimeStampedModel):
 		db_table = 'album'
 	
 	title = models.CharField(max_length=200)
-	band = models.ForeignKey('Band', related_name='albuns')
+	band = models.ForeignKey(Band, on_delete=models.CASCADE)
 	date = models.DateField()
 
 class Member(models.Model):
@@ -31,4 +31,4 @@ class Member(models.Model):
 	
 	name = models.CharField(max_length=200)
 	age = models.IntegerField()
-	band = models.ForeignKey('Band', related_name='members')
+	band = models.ForeignKey(Band, on_delete=models.CASCADE)
