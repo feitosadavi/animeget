@@ -1,4 +1,4 @@
-# ANIMEGET - API for anime fans add and get information about their favourite animes
+# Musicapi - AN API made for storage music info
 This API was writting with [Django REST framework](http://www.django-rest-framework.org/), a powerful and flexible toolkit for building Web APIs with [Django](https://www.djangoproject.com/).
 
 ## Requirements
