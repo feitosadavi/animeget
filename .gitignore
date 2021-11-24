@@ -1,3 +1,5 @@
 venv
 musicapi/api/__pycache__
+musicapi/api/migrations
 musicapi/musicapi/__pycache__
+musicapi/db.sqlite3
