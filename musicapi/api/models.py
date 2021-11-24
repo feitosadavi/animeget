@@ -24,3 +24,11 @@ class Album(TimeStampedModel):
 	title = models.CharField(max_length=200)
 	band = models.ForeignKey('Band', related_name='albuns')
 	date = models.DateField()
+
+class Member(models.Model):
+	class Meta:
+		db_table = 'member'
+	
+	name = models.CharField(max_length=200)
+	age = models.IntegerField()
+	band = models.ForeignKey('Band', related_name='members')
