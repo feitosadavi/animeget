@@ -40,7 +40,8 @@ DEFAULT_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-	'rest_framework'
+	'rest_framework',
+	'django-model-utils'
 ]
 
 PROJECT_APPS = [
