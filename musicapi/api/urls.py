@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from . import views
 
+app_name='api'
 urlpatterns = [
 	url(r'^musics/$', views.MusicList.as_view(), name='music-list'),
 	url(r'^music/(?P<pk>[0-9]+)/$', views.AlbumDetail.as_view()),
