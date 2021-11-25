@@ -1,10 +1,14 @@
 from rest_framework import generics
 from .models import Album, Band, Member, Music
 from .serializers import AlbumSerializer, BandSerializer, MemberSerializer, MusicSerializer
+from rest_framework.authentication import SessionAuthentication
+from rest_framework.permissions import IsAdminUser, IsAuthenticated, AllowAny
 
 class MusicList(generics.ListCreateAPIView):
 	queryset = Music.objects.all()
 	serializer_class = MusicSerializer
+	authentication_classes = [SessionAuthentication]
+	permission_classes = (IsAuthenticated,)
 
 class MusicDetail(generics.RetrieveUpdateAPIView):
 	queryset = Music.objects.all()
